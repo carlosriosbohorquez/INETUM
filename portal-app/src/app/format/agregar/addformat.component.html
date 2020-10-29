@@ -1,0 +1,26 @@
+<div class="col-md-6">
+  <h2 class="text-center">Agregar Formato</h2>
+<form>
+  <div class="form-group">
+    <label for="nameDoc">Nombre documento:</label>
+    <input [(ngModel)]="entityFormat.nameDoc" placeholder="Nombre documento" name="nameDoc" class="form-control" id="nameDoc">
+  </div>
+
+  <div class="form-group">
+    <label for="descDoc">Descripcion documento:</label>
+    <input [(ngModel)]="entityFormat.descDoc" placeholder="Descripcion documento" name="descDoc" class="form-control" id="descDoc">
+  </div>
+
+  <div class="form-group">
+    <label for="dateCreation">Fecha Creacion:</label>
+    <input [(ngModel)]="entityFormat.dateCreation" placeholder="Fecha modificacion" type="date"  name="dateCreation" class="form-control" id="dateCreation">
+  </div>
+
+  <div class="form-group">
+    <label for="dateModification">Fecha Modificacion:</label>
+    <input [(ngModel)]="entityFormat.dateModification" placeholder="Fecha Creacion:" type="date" name="dateModification" class="form-control" id="dateModification">    
+  </div>
+
+  <button class="btn btn-success" (click)="createFormat()">Crear</button>
+</form>
+</div>

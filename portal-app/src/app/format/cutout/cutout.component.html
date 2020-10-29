@@ -1,0 +1,18 @@
+<div class="col-md-6">
+  <h2 class="text-center">Recorte Documento</h2>
+
+  <div class="form-group">
+    <label for="idDoc">ID Documento:</label>
+    <input [(ngModel)]="entityDoc.idDoc" placeholder="ID Documento" name="idDoc" class="form-control" id="idDoc">
+  </div>
+
+  <button class="btn btn-success" (click)="searchFormat(entityDoc.idDoc)">Buscar</button>
+
+  </div>
+
+<div class="form-group">
+  
+  <img class="img-responsive" src={{entityDoc.pathDoc}}>  
+  
+
+</div>

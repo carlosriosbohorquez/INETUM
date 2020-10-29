@@ -1,0 +1,33 @@
+<div class="col-md-6">
+  <h2 class="text-center">Agregar Documento</h2>
+<form>
+  <div class="form-group">
+    <label for="nameDoc">Nombre documento:</label>
+    <input [(ngModel)]="entityDoc.nameDoc" placeholder="Nombre documento" name="nameDoc" class="form-control" id="nameDoc">
+  </div>
+
+  <div class="form-group">
+    <label for="descDoc">Ruta documento:</label>
+    <input [(ngModel)]="entityDoc.pathDoc" placeholder="Ruta documento" type="file" name="descDoc" class="form-control" id="descDoc">
+  </div>
+
+  <div class="form-group">
+    <label for="dateCreation">Fecha Creacion:</label>
+    <input [(ngModel)]="entityDoc.dateCreation" placeholder="Fecha modificacion" type="date"  name="dateCreation" class="form-control" id="dateCreation">
+  </div>
+
+  <div class="form-group">
+    <label for="dateModification">Fecha Modificacion:</label>
+    <input [(ngModel)]="entityDoc.dateModification" placeholder="Fecha Creacion:" type="date" name="dateModification" class="form-control" id="dateModification">    
+  </div>
+
+  <div class="form-group">
+    <label for="idDocumento">Id Formato:</label>    
+    <select ng-model="entityDoc.idFormat">
+      <option ng-selected="entityDoc.idFormat == ids.idformat" *ngFor="let ids of formats" ng-value="ids.idformat">{{ids.nameDoc}}</option>
+    </select>
+  </div>
+
+  <button class="btn btn-success" (click)="createDocument()">Crear</button>
+</form>
+</div>

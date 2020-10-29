@@ -1,0 +1,26 @@
+<div class="col-md-6">
+<h2> Formatos Creados</h2>
+
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th class="hidden">Id</th>
+    <th>IdFormato</th>
+    <th>Nombre</th>
+    <th>Descripcion</th>
+    <th>Creacion</th>
+    <th>Modificacion</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let entityformat of formats">
+    <td class="hidden">{{entityformat.idformat}}</td>
+    <td>{{entityformat.nameDoc}}</td>
+    <td>{{entityformat.descDoc}}</td>
+    <td>{{entityformat.dateCreation}}</td>
+    <td>{{entityformat.dateModification}}</td>
+    <td><button class="btn btn-danger" (click)="deleteUser(entityformat)"> Eliminar Formato</button></td>
+  </tr>
+  </tbody>
+</table>
+</div>
